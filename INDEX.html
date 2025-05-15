@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fontes de Energia</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background: #f0f8ff;
+      color: #333;
+      padding: 20px;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    header {
+      text-align: center;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #009879;
+    }
+
+    header h1 {
+      color: #009879;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #555;
+      font-style: italic;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+      overflow: hidden;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
+      transform: translateY(20px);
+      opacity: 0;
+      animation: slideUp 0.8s forwards;
+    }
+
+    /* Delay a animação das cartas */
+    .card:nth-child(1) { animation-delay: 0.2s; }
+    .card:nth-child(2) { animation-delay: 0.4s; }
+    .card:nth-child(3) { animation-delay: 0.6s; }
+    .card:nth-child(4) { animation-delay: 0.8s; }
+    .card:nth-child(5) { animation-delay: 1s; }
+
+    @keyframes slideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .card img {
+      max-width: 300px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 10px 0 0 10px;
+      flex: 1 1 300px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card img:hover {
+      transform: scale(1.05);
+    }
+
+    .card-content {
+      padding: 20px;
+      flex: 2 1 400px;
+    }
+
+    .card-content h2 {
+      color: #009879;
+      margin-bottom: 10px;
+    }
+
+    .card-content p {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.4;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 0.9rem;
+      color: #777;
+      font-style: italic;
+    }
+
+    @media (max-width: 700px) {
+      .card {
+        flex-direction: column;
+      }
+      .card img {
+        border-radius: 10px 10px 0 0;
+        max-width: 100%;
+      }
+      .card-content {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Fontes de Energia</h1>
+    <p>Conheça as principais fontes de energia que movem o mundo sustentável</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Energia Solar" />
+      <div class="card-content">
+        <h2>Energia Solar</h2>
+        <p>A energia solar é gerada a partir da luz do sol através de painéis fotovoltaicos, sendo uma fonte limpa, renovável e sustentável.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=600&q=80" alt="Energia Eólica" />
+      <div class="card-content">
+        <h2>Energia Eólica</h2>
+        <p>A energia eólica é obtida a partir da força do vento, que gira turbinas para gerar eletricidade sem emissão de poluentes.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=600&q=80" alt="Energia Hidrelétrica" />
+      <div class="card-content">
+        <h2>Energia Hidrelétrica</h2>
+        <p>Produzida pelo movimento da água em barragens, a energia hidrelétrica é uma das principais fontes renováveis de energia no mundo.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <img src="https://images.unsplash.com/photo-1486308510493-cb4f3d4d3efb?auto=format&fit=crop&w=600&q=80" alt="Energia Geotérmica" />
+      <div class="card-content">
+        <h2>Energia Geotérmica</h2>
+        <p>Originada do calor interno da Terra, essa fonte é utilizada para geração de eletricidade e aquecimento, sendo constante e limpa.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbe2?auto=format&fit=crop&w=600&q=80" alt="Energia Biomassa" />
+      <div class="card-content">
+        <h2>Energia Biomassa</h2>
+        <p>Derivada de matéria orgânica, a biomassa pode ser queimada ou convertida em biogás para gerar energia, contribuindo para o ciclo sustentável.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Fontes de Energia. Todos os direitos reservados.
+  </footer>
+</body>
+</html>
